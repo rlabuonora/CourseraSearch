@@ -13,4 +13,3 @@ class Coursera
   end
 end
 
-pp Coursera.for("python")
