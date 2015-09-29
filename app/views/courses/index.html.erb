@@ -1,11 +1,13 @@
 <h1>Searching for "<%= @search_term %>"</h1>
+
+<% if @search_results %>
 <table>
   <thead>
-  <tr>
-    <td>Image</td>
-    <td>Name</td>
-    <td>Description</td>
-  </tr>
+    <tr>
+      <td>Image</td>
+      <td>Name</td>
+      <td>Description</td>
+    </tr>
   </thead>
   <tbody>
     <% @search_results.each do |course| %>
@@ -18,4 +20,6 @@
     <% end %>
   </tbody>
 </table>
-
+<% else %>
+<h2> No results! </h2>
+<% end %>

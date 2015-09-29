@@ -10,7 +10,8 @@ class Coursera
   
   # return an array of courses
   def self.for term
-    get("", query: {query: term})["elements"].map {|h| Course.new(h) }
+    request =  get("", query: {query: term})["elements"]
+    request.map {|h| Course.new(h) } if request
   end
 end
 
