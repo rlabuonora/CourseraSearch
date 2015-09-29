@@ -8,11 +8,11 @@
   </tr>
   </thead>
   <tbody>
-    <% @search_results.each do |course_hash| %>
+    <% @search_results.each do |course| %>
     <tr>
-      <td>     Image                                </td>
-      <td> <%= course_hash["name"]              %>  </td>
-      <td> <%= course_hash["shortDescription"]  %>  </td>
+      <td> <%= image_for(course)                %>  </td>
+      <td> <%= course.name                      %>  </td>
+      <td> <%= course.short_description         %>  </td>
     </tr>
 
     <% end %>

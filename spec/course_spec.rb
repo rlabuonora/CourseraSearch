@@ -1,4 +1,4 @@
-require 'spec_helper.rb'
+require 'spec_helper'
 
 describe Course do
   subject(:course) { Course.new(name: "My Course", shortDescription: "bbla bla", smallIcon: "https://tag.com") }
