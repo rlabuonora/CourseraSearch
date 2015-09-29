@@ -1,0 +1,24 @@
+<h1>Searching for "<%= @search_term %>"</h1>
+
+
+
+<table>
+  <thead>
+  <tr>
+    <td>Image</td>
+    <td>Name</td>
+    <td>Description</td>
+  </tr>
+  </thead>
+  <tbody>
+    <% @search_results.each do |course_hash| %>
+    <tr>
+      <td>     Image                                </td>
+      <td> <%= course_hash["name"]              %>  </td>
+      <td> <%= course_hash["shortDescription"]  %>  </td>
+    </tr>
+
+    <% end %>
+  </tbody>
+</table>
+
